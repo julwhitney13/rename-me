@@ -19,8 +19,11 @@ class NameCard(db.Model):
     language = db.Column(db.Enum, nullable=False, default=Language.en)
     """
     v1/v2:
+    pronounciation: string
     origin: string
+    themes: string[]
     meaning: string
+    ^^ or would just be NLP Vectors?
     syllables: number
     alternate spellings: namecard.id[]
     nicknames: namecard.id[]
